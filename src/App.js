@@ -8,6 +8,22 @@ function App() {
   let [homeScore, setHomeScore] = useState(0);
   let [awayScore, setAwayScore] = useState(0);
 
+  // let [minCount, setMinCount] = useState(15);
+  let [secCount, setSecCount] = useState(59);
+
+// attempted to create a working countdown.
+//countdown didn't stop when it reached 0 :(
+
+  // useState(() => {
+  //   const countdown = setInterval(() => {
+  //     setSecCount(secCount => secCount - 1);
+  //   }, 1000);
+  //       return () => clearInterval(countdown);
+  // }, [secCount]);
+
+
+
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -19,7 +35,7 @@ function App() {
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">{secCount}</div>
           <div className="away">
             <h2 className="away__name">Packers</h2>
             <div className="away__score">{awayScore}</div>
